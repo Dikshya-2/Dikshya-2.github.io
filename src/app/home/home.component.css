@@ -1,0 +1,25 @@
+.home-section {
+    background-color: #212529; /* Dark background color */
+    color: #ffffff; /* Light text color */
+    padding: 100px 0; /* Padding for top and bottom */
+}
+
+.btn-primary {
+    background-color: #20c997; /* Custom button color */
+    border: none; /* Remove border */
+}
+
+.social-icons a {
+    margin: 0 10px; /* Space between icons */
+    color: #20c997; /* Icon color */
+    font-size: 24px; /* Icon size */
+}
+
+.social-icons a:hover {
+    color: #ffffff; /* Change color on hover */
+}
+
+img {
+    border-radius: 50%; /* Circular image */
+    max-width: 300px; /* Limit image size */
+}

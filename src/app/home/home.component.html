@@ -1,0 +1,20 @@
+<div class="container-fluid d-flex flex-column align-items-center justify-content-center text-center home-section">
+    <div class="row">
+      <div class="col-md-6">
+        <h2>Hello, I’m</h2>
+        <h1>{{ name }}</h1>
+        <h3>{{ role }}</h3>
+        <p>{{ description }}</p>
+        <a routerLink="/contact" class="btn btn-primary btn-lg">Let's Talk</a>
+        <div class="social-icons mt-4">
+          <a *ngFor="let link of socialLinks" [href]="link.url" target="_blank" rel="noopener noreferrer">
+            <i [class]="link.icon"></i>
+          </a>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <img [src]="imageUrl" alt="Profile Picture" class="img-fluid rounded-circle" />
+      </div>
+    </div>
+  </div>
+  
