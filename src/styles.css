@@ -1,3 +1,23 @@
 html {
     scroll-behavior: smooth;
 }
+
+
+.navbar {
+  margin-bottom: 20px; /* Spacing below the navbar */
+}
+
+.nav-link {
+  font-weight: bold; /* Making nav links bold */
+}
+.nav-link:hover {
+    color: #129776; 
+    
+    transition: color 0.3s ease-in-out; 
+  }
+  
+  
+  .navbar .nav-link:hover {
+    background-color: #f8f9fa; /* Change background on hover */
+    border-radius: 5px; 
+  }
