@@ -19,15 +19,6 @@ export class SkillsComponent {
       icon: '../assets/Csharp.png'
     },
     {
-      name: 'CSS',
-        icon: '../assets/Logo.jpg' 
-
-    },
-    {
-        name: 'Angular',
-        icon: '../assets/download.png' 
-    },
-    {
         name: 'Java',
         icon: '../assets/Java.png' 
     },
@@ -40,12 +31,24 @@ export class SkillsComponent {
     icon: '../assets/python.svg' 
 },
 {
+  name: '.Net',
+  icon: '../assets/NET.jpg' 
+},
+{
+  name: 'PHP',
+  icon: '../assets/images.png' 
+},
+{
   name: 'Postman',
   icon: '../assets/postman.png' 
 },
 {
   name: 'swagger',
   icon: '../assets/swagger-logo-horizontal.jpeg' 
+},
+{
+  name: 'Angular',
+  icon: '../assets/download.png' 
 },
 {
   name: 'Typescript',
@@ -57,13 +60,41 @@ export class SkillsComponent {
   icon: '../assets/HTML.jpg' 
 },
 {
-  name: '.Net',
-  icon: '../assets/NET.jpg' 
+  name: 'CSS',
+    icon: '../assets/Logo.jpg' 
+
 },
 {
-  name: 'PHP',
-  icon: '../assets/images.png' 
-}
+  name: 'Bootstrap',
+    icon: '../assets/bootstrap.png' 
+    
+},
+{
+  name: 'SPSS',
+    icon: '../assets/spss.png' 
+},
+{
+  name: 'IoT',
+    icon: '../assets/IoT.png' 
+},
+{
+  name: 'cisco',
+    icon: '../assets/cisco.png' 
+},
+{
+  name: 'SQLite',
+    icon: '../assets/Sqlite.jpg' 
+},
+{
+  name: 'MS-SQL',
+    icon: '../assets/ms-sql.jpg' 
+},
+{
+  name: 'MySQL',
+    icon: '../assets/mysql.jpg' 
+},
+
+
 ];
 
 

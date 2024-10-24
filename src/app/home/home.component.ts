@@ -16,11 +16,10 @@ export class HomeComponent {
   name: string = 'Dikshya Singh Shah';
   role: string = 'Aspiring Full Stack Developer | Programming Student at TEC';
   description: string = `
-    I am a 33-year-old programming student at TEC with experience in both web and mobile application development.
-    I have developed mobile applications using Java in Android Studio and created web applications using .NET for the backend 
-    and Angular for the frontend. With a bachelor's degree in public health focused on biostatistics and epidemiology, I bring strong analytical skills 
-    to my programming journey. I am ambitious and passionate about technology, programming, and problem-solving, 
-    always seeking to create dynamic, user-friendly applications that address real-world challenges.
+    Passionate about both frontend and backend development,
+    I am committed to creating dynamic, user-friendly applications that solve real-world problems. 
+    My journey in programming has equipped me with the skills to blend creativity with technical 
+    expertise, enabling me to deliver seamless digital experiences.
   `;
   imageUrl: string = "assets/image_50400513.JPG";
   // socialLinks = [
