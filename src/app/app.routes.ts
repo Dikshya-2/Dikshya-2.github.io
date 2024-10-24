@@ -8,8 +8,9 @@ import { SkillsComponent } from './skills/skills.component';
 export const routes: Routes = [
     { path: '', component: HomeComponent },
     { path: 'about', component: AboutComponent },
-    { path: 'projects', component: ProjectComponent },
+    { path: 'project', component: ProjectComponent },
     { path: 'contact', component: ContactComponent },
     {path: 'skills', component: SkillsComponent},
+    { path: '**', redirectTo: '', pathMatch: 'full' }  // Fallback route
   
 ];

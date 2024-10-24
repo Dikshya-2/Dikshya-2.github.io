@@ -7,12 +7,19 @@
 .btn-primary {
     background-color: #20c997; /* Custom button color */
     border: none; /* Remove border */
+    transition: background-color 0.3s; /* Smooth transition */
+}
+
+.btn-primary:hover {
+    background-color: #17a2b8; /* Darker shade on hover */
+    color: #ffffff; /* Ensure text remains readable */
 }
 
 .social-icons a {
     margin: 0 10px; /* Space between icons */
     color: #20c997; /* Icon color */
     font-size: 24px; /* Icon size */
+    transition: color 0.3s; /* Smooth transition */
 }
 
 .social-icons a:hover {
@@ -23,3 +30,22 @@ img {
     border-radius: 50%; /* Circular image */
     max-width: 300px; /* Limit image size */
 }
+
+@media (max-width: 768px) {
+    .home-section {
+        padding: 50px 0; /* Reduced padding on smaller screens */
+    }
+
+    img {
+        max-width: 200px; /* Smaller images for mobile */
+    }
+
+    .social-icons a {
+        font-size: 20px; /* Smaller icon size on mobile */
+    }
+}
+
+
+
+
+

@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { RouterModule } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
 import { SkillsComponent } from '../skills/skills.component';
 
 
@@ -22,9 +22,16 @@ export class HomeComponent {
     expertise, enabling me to deliver seamless digital experiences.
   `;
   imageUrl: string = "assets/image_50400513.JPG";
-  // socialLinks = [
-  //   { name: 'GitHub', url: 'https://github.com/Dikshya-2', icon: 'bi bi-github' },
-  //   { name: 'LinkedIn', url: 'https://www.linkedin.com/in/dikshya-singh-shah-72b46391/', icon: 'bi bi-linkedin' },
-  //   { name: 'Portfolio', url: 'https://example.com/', icon: 'fas fa-user' } 
-  // ];
+  isContactVisible: boolean = false;  
+  constructor(private router: Router) {}
+
+  toggleContact() {
+    this.isContactVisible = !this.isContactVisible;
+    if (this.isContactVisible) {
+      this.router.navigate(['/contact']);
+    } else {
+      this.router.navigate(['/']); // Navigate back to home
+    }
+  }
+
 }

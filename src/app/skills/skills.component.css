@@ -1,10 +1,9 @@
-/* Ensure images have the same size */
 .skill-icon {
-    width: 200px;   /* Adjust width as per your requirement */
-    height: 200px;  /* Adjust height as per your requirement */
-    object-fit: contain; /* Maintain the aspect ratio without cropping */
-    border: 1px solid #ddd; /* Optional: add a border around the image */
-    padding: 5px;  /* Optional: add some padding */
-    background-color: #219c9c; /* Optional: background color for better visibility */
-    border-radius: 5px; /* Optional: rounded corners */
+    width: 100%;      /* Make the image responsive within its container */
+    height: 100px;    
+    object-fit: contain; /* Maintain aspect ratio without cropping */
+    border: 1px solid #ddd; 
+    padding: 5px;    
+    background-color: #219c9c;
+    border-radius: 5px; 
 }

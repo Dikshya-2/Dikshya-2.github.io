@@ -11,7 +11,7 @@ import { RouterModule } from '@angular/router';
 })
 export class FooterComponent {
   email: string = 'dikshyasingh12@gmail.com'; 
-  location: string = 'Lyngby Hovedgade, 2800 Lyngby, Denmark'; 
+  location: string = 'Lyngby Hovedgade 106 st.mf, 2800 Lyngby, Denmark'; 
   socialLinks = [
     { name: 'GitHub', url: 'https://github.com/Dikshya-2', icon: 'bi bi-github' },
     { name: 'LinkedIn', url: 'https://www.linkedin.com/in/dikshya-singh-shah-72b46391/', icon: 'bi bi-linkedin' },
