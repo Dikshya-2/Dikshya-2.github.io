@@ -9,7 +9,9 @@ import { Component } from '@angular/core';
   styleUrl: './contact.component.css'
 })
 export class ContactComponent {
-  email: string = 'your_email@example.com';
+  email: string = 'dikshyasingh12@gmail.com';
   name: string = 'Dikshya Singh Shah';
+  phone: string= '+45 22221844';
+  location: string = 'Lyngby Hovedgade 106, 2800 Lyngby, Denmark';
 
 }

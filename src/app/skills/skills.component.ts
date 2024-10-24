@@ -1,13 +1,14 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { Skill } from '../Models/skill';
+import { RouterModule } from '@angular/router';
 
 
 
 @Component({
   selector: 'app-skills',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, RouterModule ],
   templateUrl: './skills.component.html',
   styleUrl: './skills.component.css'
 })

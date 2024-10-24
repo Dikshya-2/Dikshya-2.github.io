@@ -1,1 +1,39 @@
-<p>footer works!</p>
+<footer class="container-fluid text-center py-4 footer-section">
+    <div class="row">
+      <!-- Contact Information -->
+      <div class="col-md-4">
+        <h5>Contact Me</h5>
+        <p>Email: <a [href]="'mailto:' + email">{{ email }}</a></p>
+        <p>Location: {{ location }}</p>
+      </div>
+  
+      <!-- Quick Links -->
+      <div class="col-md-4">
+        <h5>Quick Links</h5>
+        <ul class="list-unstyled">
+          <li><a routerLink="/">Home</a></li>
+          <li><a routerLink="contact">Contact</a></li>
+          <li><a routerLink="skills">Skills</a></li>
+          <li><a href="http://localhost:4200/" target="_blank">Portfolio</a></li>
+        </ul>
+      </div>
+  
+      <!-- Social Links -->
+      <div class="col-md-4">
+        <h5>Follow Me</h5>
+        <div class="social-icons">
+          <a *ngFor="let link of socialLinks" [href]="link.url" target="_blank" rel="noopener noreferrer">
+            <i [class]="link.icon"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Copyright -->
+    <div class="row mt-4">
+      <div class="col-12">
+        <p>&copy; 2024 Dikshya Singh Shah. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+  

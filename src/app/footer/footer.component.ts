@@ -1,12 +1,20 @@
+import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-footer',
   standalone: true,
-  imports: [],
+  imports: [CommonModule, RouterModule],
   templateUrl: './footer.component.html',
   styleUrl: './footer.component.css'
 })
 export class FooterComponent {
-
+  email: string = 'dikshyasingh12@gmail.com'; 
+  location: string = 'Lyngby Hovedgade, 2800 Lyngby, Denmark'; 
+  socialLinks = [
+    { name: 'GitHub', url: 'https://github.com/Dikshya-2', icon: 'bi bi-github' },
+    { name: 'LinkedIn', url: 'https://www.linkedin.com/in/dikshya-singh-shah-72b46391/', icon: 'bi bi-linkedin' },
+    { name: 'Portfolio', url: 'http://localhost:4200/', icon: 'fas fa-user' }
+  ];
 }
