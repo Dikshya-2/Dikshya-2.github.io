@@ -4,6 +4,7 @@ import { AboutComponent } from './about/about.component';
 import { ProjectComponent } from './project/project.component';
 import { ContactComponent } from './contact/contact.component';
 import { SkillsComponent } from './skills/skills.component';
+import { CVComponent } from './cv/cv.component';
 
 export const routes: Routes = [
     { path: '', component: HomeComponent },
@@ -11,6 +12,7 @@ export const routes: Routes = [
     { path: 'project', component: ProjectComponent },
     { path: 'contact', component: ContactComponent },
     {path: 'skills', component: SkillsComponent},
+    {path: 'cv', component: CVComponent},
     { path: '**', redirectTo: '', pathMatch: 'full' }  // Fallback route
   
 ];

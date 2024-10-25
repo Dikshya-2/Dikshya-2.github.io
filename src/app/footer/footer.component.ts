@@ -11,6 +11,7 @@ import { RouterModule } from '@angular/router';
 })
 export class FooterComponent {
   email: string = 'dikshyasingh12@gmail.com'; 
+  phone: string= '+45 22221844';
   location: string = 'Lyngby Hovedgade 106 st.mf, 2800 Lyngby, Denmark'; 
   socialLinks = [
     { name: 'GitHub', url: 'https://github.com/Dikshya-2', icon: 'bi bi-github' },

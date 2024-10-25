@@ -1,7 +1,34 @@
 .home-section {
     background-color: #212529; /* Dark background color */
     color: #ffffff; /* Light text color */
-    padding: 100px 0; /* Padding for top and bottom */
+    padding: 120px 0; /* Increased padding for top and bottom for more height */
+    min-height: 100vh; /* Ensures the section covers the full height of the viewport */
+    display: flex; /* Flexbox to center content */
+    align-items: center; /* Vertically center content */
+ 
+}
+
+.text-content {
+    text-align: left; /* Align text to the left for better readability */
+}
+
+h2 {
+    font-size: 2rem; /* Adjust size for better visibility */
+}
+
+h1 {
+    font-size: 3rem; /* Adjust size for better visibility */
+    font-weight: bold; /* Make the name bold */
+}
+
+h3 {
+    font-size: 1.8rem; /* Slightly larger role */
+    color: #20c997; /* Use the button color for consistency */
+}
+
+p {
+    font-size: 1.2rem; /* Increase paragraph font size */
+    line-height: 1.5; /* Improve readability */
 }
 
 .btn-primary {
@@ -31,21 +58,25 @@ img {
     max-width: 300px; /* Limit image size */
 }
 
+.profile-img {
+    max-width: 80%; /* Ensure responsive image */
+    height: auto; /* Maintain aspect ratio */
+}
+
 @media (max-width: 768px) {
     .home-section {
-        padding: 50px 0; /* Reduced padding on smaller screens */
+        padding: 80px 0; /* Adjust padding on smaller screens */
+    }
+
+    .text-content {
+        text-align: center; /* Center text on mobile */
     }
 
     img {
-        max-width: 200px; /* Smaller images for mobile */
+        max-width: 150px; /* Smaller images for mobile */
     }
 
     .social-icons a {
         font-size: 20px; /* Smaller icon size on mobile */
     }
 }
-
-
-
-
-
