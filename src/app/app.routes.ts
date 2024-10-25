@@ -13,6 +13,6 @@ export const routes: Routes = [
     { path: 'contact', component: ContactComponent },
     {path: 'skills', component: SkillsComponent},
     {path: 'cv', component: CVComponent},
-    { path: '**', redirectTo: '', pathMatch: 'full' }  // Fallback route
+    { path: '**', redirectTo: '', pathMatch: 'full' } 
   
 ];
