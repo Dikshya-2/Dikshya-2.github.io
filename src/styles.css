@@ -9,7 +9,7 @@ html {
 
 .nav-link {
   font-weight: bold; /* Making nav links bold */
-  color: blue;
+  color: rgb(23, 139, 71);
 }
 
 .nav-link:hover {

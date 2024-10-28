@@ -1,6 +1,6 @@
-import { CommonModule } from '@angular/common';
+import { CommonModule, ViewportScroller } from '@angular/common';
 import { Component, EventEmitter, Output } from '@angular/core';
-import { RouterModule } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
 import { SkillsComponent } from '../skills/skills.component';
 import { AboutComponent } from '../about/about.component';
 import { ProjectComponent } from '../project/project.component';
@@ -16,10 +16,17 @@ import { HomeComponent } from "../home/home.component";
   styleUrl: './navbar.component.css'
 })
 export class NavbarComponent {
+  constructor(private viewportScroller: ViewportScroller, private router: Router) {}
   @Output() scrollTo = new EventEmitter<string>();
 
   navigateTo(section: string) {
-    this.scrollTo.emit(section);
+    if (this.router.url !== '/') {
+      this.router.navigate(['/']).then(() => {
+          this.viewportScroller.scrollToAnchor(section);
+      });
+  } else {
+      this.viewportScroller.scrollToAnchor(section);
+  }
   }
 }
  

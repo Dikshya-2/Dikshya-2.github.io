@@ -1,9 +1,36 @@
 .skill-icon {
-    width: 100%;      /* Make the image responsive within its container */
-    height: 100px;    
-    object-fit: contain; /* Maintain aspect ratio without cropping */
+    width: 100%;                /* Full width of container */
+    height: 100px;              /* Fixed height */
+    object-fit: contain;        /* Maintains aspect ratio */
     border: 1px solid #ddd; 
     padding: 5px;    
     background-color: #219c9c;
     border-radius: 5px; 
+}
+
+h2 {
+    font-size: 2rem; 
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.skill-name {
+    font-size: 1.1rem;
+    margin-top: 10px;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    h2 {
+        font-size: 2rem;
+        
+    }
+    
+    .skill-icon {
+        height: 80px; /* Smaller icon height for mobile */
+    }
+    
+    .skill-name {
+        font-size: 1rem;
+    }
 }

@@ -1,82 +1,72 @@
 .home-section {
-    background-color: #212529; /* Dark background color */
-    color: #ffffff; /* Light text color */
-    padding: 120px 0; /* Increased padding for top and bottom for more height */
-    min-height: 100vh; /* Ensures the section covers the full height of the viewport */
-    display: flex; /* Flexbox to center content */
-    align-items: center; /* Vertically center content */
+    background-color: #212529; 
+    color: #ffffff; 
+    padding: 120px 0; 
+    min-height: 100vh; 
+    display: flex; 
+    align-items: center;
  
 }
 
 .text-content {
-    text-align: left; /* Align text to the left for better readability */
+    text-align: left; 
 }
 
 h2 {
-    font-size: 2rem; /* Adjust size for better visibility */
+    font-size: 2rem; 
 }
 
 h1 {
-    font-size: 3rem; /* Adjust size for better visibility */
-    font-weight: bold; /* Make the name bold */
+    font-size: 3rem; 
+    font-weight: bold; 
 }
 
 h3 {
-    font-size: 1.8rem; /* Slightly larger role */
-    color: #20c997; /* Use the button color for consistency */
+    font-size: 1.8rem; 
+    color: #20c997; 
 }
 
 p {
-    font-size: 1.2rem; /* Increase paragraph font size */
-    line-height: 1.5; /* Improve readability */
+    font-size: 1.2rem; 
+    line-height: 1.5; 
 }
 
 .btn-primary {
-    background-color: #20c997; /* Custom button color */
-    border: none; /* Remove border */
-    transition: background-color 0.3s; /* Smooth transition */
+    background-color: #20c997; 
+    border: none; 
+    transition: background-color 0.3s; 
 }
 
 .btn-primary:hover {
-    background-color: #17a2b8; /* Darker shade on hover */
-    color: #ffffff; /* Ensure text remains readable */
+    background-color: #17a2b8;
+    color: #ffffff; 
 }
 
-.social-icons a {
-    margin: 0 10px; /* Space between icons */
-    color: #20c997; /* Icon color */
-    font-size: 24px; /* Icon size */
-    transition: color 0.3s; /* Smooth transition */
-}
-
-.social-icons a:hover {
-    color: #ffffff; /* Change color on hover */
-}
 
 img {
-    border-radius: 50%; /* Circular image */
-    max-width: 300px; /* Limit image size */
+    border-radius: 50%; 
+    max-width: 300px; 
 }
 
 .profile-img {
-    max-width: 80%; /* Ensure responsive image */
-    height: auto; /* Maintain aspect ratio */
+    max-width: 80%; 
+    height: auto; 
 }
 
 @media (max-width: 768px) {
     .home-section {
-        padding: 80px 0; /* Adjust padding on smaller screens */
+        padding: 80px 0; 
     }
 
     .text-content {
-        text-align: center; /* Center text on mobile */
+        text-align: center; 
     }
 
     img {
-        max-width: 150px; /* Smaller images for mobile */
+        max-width: 150px; 
     }
 
     .social-icons a {
-        font-size: 20px; /* Smaller icon size on mobile */
+        font-size: 20px; 
     }
 }

@@ -1,6 +1,18 @@
 #about {
     padding: 20px;
-    background: #fff;
+    background-color: #fff;
     border: 1px solid #ddd;
     margin: 10px;
+    text-align: center;
+}
+
+.about-section h2 {
+    font-size: 2rem;       
+    margin-bottom: 10px;
+}
+
+.about-section p {
+   
+    font-size: 1.2rem; 
+    line-height: 1.5; 
 }
