@@ -1,3 +1,7 @@
+.skill-section {
+    margin-bottom: 200px;
+}
+
 .skill-icon {
     width: 100%;                /* Full width of container */
     height: 100px;              /* Fixed height */
@@ -27,7 +31,7 @@ h2 {
     }
     
     .skill-icon {
-        height: 80px; /* Smaller icon height for mobile */
+        height: 80px; 
     }
     
     .skill-name {

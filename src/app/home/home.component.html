@@ -1,7 +1,5 @@
- <!-- <app-navbar (scrollTo)="scrollToSection($event)"></app-navbar>  -->
-
 <div class="container-fluid d-flex flex-column align-items-center justify-content-center text-center home-section">
-  <div class="row">
+  <div class="row align-items-center">
     <div class="col-md-6">
       <h2>Hello, I’m</h2>
       <h1>{{ name }}</h1>
@@ -16,10 +14,14 @@
     </div>
   </div>
   <div class="container">
-    <section #aboutSection id="about">
-      <app-about></app-about>
-    </section>
-  
+    <div class="row d-flex justify-content-end">
+      <div class="col-md-12">  
+        <section #aboutSection id="about"class="text-end about-section">
+          <app-about></app-about>
+        </section>
+      </div>
+    </div>
+
     <section #skillsSection id="skills">
       <app-skills></app-skills>
     </section>
@@ -31,4 +33,5 @@
     <section #contactSection id="contact">
       <app-contact></app-contact>
     </section>
+  </div>
 </div>

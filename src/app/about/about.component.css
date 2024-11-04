@@ -1,18 +1,56 @@
-#about {
-    padding: 20px;
-    background-color: #fff;
-    border: 1px solid #ddd;
-    margin: 10px;
+.about-section {
+    padding: 40px; 
+    margin: 200px auto; 
     text-align: center;
+    margin-bottom: 200px;
+    margin-left: 450px;
+    max-width: 1500px; 
+    
 }
 
 .about-section h2 {
     font-size: 2rem;       
-    margin-bottom: 10px;
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add shadow to the header */
 }
 
 .about-section p {
-   
     font-size: 1.2rem; 
     line-height: 1.5; 
+    margin: 0;
+    padding: 1rem;
+    background-color: rgba(231, 11, 114, 0.05); /* Slight background color to make shadow more noticeable */
+    box-shadow: 20px 44px 18px rgba(255,255,255,1); /* Shadow around the paragraph */
+    border-radius: 8px; /* Rounds corners for a softer look */
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .about-section {
+        padding: 20px; 
+        margin: 40px 20px; 
+    }
+
+    .about-section h2 {
+        font-size: 1.8rem; 
+    }
+
+    .about-section p {
+        font-size: 1rem; 
+    }
+}
+
+@media (max-width: 576px) {
+    .about-section {
+        padding: 15px; 
+        margin: 20px 10px; 
+    }
+
+    .about-section h2 {
+        font-size: 1.5rem;
+    }
+
+    .about-section p {
+        font-size: 0.9rem; 
+    }
 }

@@ -1,12 +1,22 @@
 .home-section {
-    background-color: #212529; 
-    color: #ffffff; 
+    background-color: #4d4e4c; /* Dark background color */
+    color: #ffffff;
     padding: 120px 0; 
     min-height: 100vh; 
     display: flex; 
     align-items: center;
- 
 }
+.about-section {
+    padding-right: 1.5rem; 
+    margin-right: 1px; 
+    margin-left: 100px;
+}
+
+ @media (min-width: 768px) {
+    .about-section {
+        padding-right: 2rem; /* Adjust for larger screens */
+    }
+} 
 
 .text-content {
     text-align: left; 
@@ -44,29 +54,26 @@ p {
 
 
 img {
-    border-radius: 50%; 
-    max-width: 300px; 
+    border-radius: 50%; /* Circular image */
+    max-width: 300px; /* Limit image size */
 }
 
 .profile-img {
-    max-width: 80%; 
-    height: auto; 
+    max-width: 80%; /* Ensure responsive image */
+    height: auto; /* Maintain aspect ratio */
 }
 
 @media (max-width: 768px) {
     .home-section {
-        padding: 80px 0; 
+        padding: 80px 0; /* Adjust padding on smaller screens */
     }
 
     .text-content {
-        text-align: center; 
+        text-align: center; /* Center text on mobile */
     }
 
     img {
-        max-width: 150px; 
+        max-width: 150px; /* Smaller images for mobile */
     }
 
-    .social-icons a {
-        font-size: 20px; 
-    }
 }
