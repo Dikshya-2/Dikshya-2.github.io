@@ -10,9 +10,10 @@ import { RouterModule } from '@angular/router';
   styleUrl: './footer.component.css'
 })
 export class FooterComponent {
-  email: string = 'dikshyasingh12@gmail.com'; 
+  currentYear: number = new Date().getFullYear();
+  email: string = 'dikshyasingh12@gmail.com';
   phone: string= '+45 22221844';
-  location: string = 'Lyngby Hovedgade 106 st.mf, 2800 Lyngby, Denmark'; 
+  location: string = 'Lyngby Hovedgade 106 st.mf, 2800 Lyngby, Denmark';
   socialLinks = [
     { name: 'GitHub', url: 'https://github.com/Dikshya-2', icon: 'bi bi-github' },
     { name: 'LinkedIn', url: 'https://www.linkedin.com/in/dikshya-singh-shah-72b46391/', icon: 'bi bi-linkedin' },

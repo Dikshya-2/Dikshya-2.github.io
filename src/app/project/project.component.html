@@ -1,19 +1,85 @@
-<div class="container mt-5 project-section">
-  <h2>My Projects</h2>
-  <div class="row">
-      <div class="col-md-4 mb-4" *ngFor="let project of projects">
-          <div class="card h-100">
-              <!-- Project Image -->
-              <img [src]="project.image" alt="{{ project.title }} image" class="card-img-top project-image">
+<div class="projects-container">
+  <div class="projects-header">
+    <h1 class="page-title">Featured Projects</h1>
+    <p class="page-subtitle">A showcase of my development work and technical skills</p>
+  </div>
 
-              <!-- Project Details -->
-              <div class="card-body">
-                  <h5 class="card-title">{{ project.title }}</h5>
-                  <p class="card-text">{{ project.description }}</p>
-                  <a [href]="project.link" target="_blank" class="btn btn-primary">View Project</a>
-              </div>
-          </div>
+  <div class="projects-grid">
+    <div class="project-card" *ngFor="let project of projects; trackBy: trackByProject">
+      <div class="project-image">
+        <img [src]="project.image" [alt]="project.title" class="project-img">
+        <div class="project-overlay">
+          <a [href]="project.link" target="_blank" class="view-project-btn">
+            <span>View Project</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+              <polyline points="15,3 21,3 21,9"></polyline>
+              <line x1="10" y1="14" x2="21" y2="3"></line>
+            </svg>
+          </a>
+        </div>
       </div>
+
+      <div class="project-content">
+        <h3 class="project-title">{{ project.title }}</h3>
+        <p class="project-description">{{ project.description }}</p>
+
+        <div class="project-tech" [ngSwitch]="project.title">
+          <div *ngSwitchCase="'3FA Login With Hashing'" class="tech-tags">
+            <span class="tech-tag">C#</span>
+            <span class="tech-tag">.NET</span>
+            <span class="tech-tag">Security</span>
+            <span class="tech-tag">Authentication</span>
+          </div>
+          <div *ngSwitchCase="'Mobile App In Java'" class="tech-tags">
+            <span class="tech-tag">Java</span>
+            <span class="tech-tag">Android</span>
+            <span class="tech-tag">Mobile</span>
+          </div>
+          <div *ngSwitchCase="'Movie Web App'" class="tech-tags">
+            <span class="tech-tag">Web Development</span>
+            <span class="tech-tag">Frontend</span>
+            <span class="tech-tag">API</span>
+          </div>
+          <div *ngSwitchCase="'Arduino Projects'" class="tech-tags">
+            <span class="tech-tag">IoT</span>
+            <span class="tech-tag">Arduino</span>
+            <span class="tech-tag">Hardware</span>
+          </div>
+          <div *ngSwitchDefault class="tech-tags">
+            <span class="tech-tag">Web Development</span>
+            <span class="tech-tag">Full Stack</span>
+          </div>
+        </div>
+
+        <a [href]="project.link" target="_blank" class="project-link">
+          View on GitHub →
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="projects-stats">
+    <div class="stat-card">
+      <div class="stat-number">{{ projects.length }}</div>
+      <div class="stat-label">Projects Completed</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-number">5+</div>
+      <div class="stat-label">Technologies Used</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-number">100%</div>
+      <div class="stat-label">GitHub Hosted</div>
+    </div>
+  </div>
+
+  <div class="cta-section">
+    <h2>Interested in Working Together?</h2>
+    <p>Let's discuss how I can contribute to your next project</p>
+    <div class="cta-buttons">
+      <button class="btn-primary" routerLink="/contact">Get In Touch</button>
+      <button class="btn-secondary" routerLink="/skills">View Skills</button>
+    </div>
   </div>
 </div>
-

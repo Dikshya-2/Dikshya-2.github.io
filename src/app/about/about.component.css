@@ -1,56 +1,84 @@
-.about-section {
-    padding: 40px; 
-    margin: 200px auto; 
-    text-align: center;
-    margin-bottom: 200px;
-    margin-left: 450px;
-    max-width: 1500px; 
-    
+/* Dark Mode About Page */
+.about-page {
+  min-height: 100vh;
+  background: #0a0a0a;
+  color: #ffffff;
+  padding: 2rem 0;
+  font-family: 'Inter', 'Segoe UI', system-ui, sans-serif;
 }
 
-.about-section h2 {
-    font-size: 2rem;       
-    margin-bottom: 15px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add shadow to the header */
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  padding-top: 40px;
 }
 
-.about-section p {
-    font-size: 1.2rem; 
-    line-height: 1.5; 
-    margin: 0;
-    padding: 1rem;
-    background-color: rgba(231, 11, 114, 0.05); /* Slight background color to make shadow more noticeable */
-    box-shadow: 20px 44px 18px rgba(255,255,255,1); /* Shadow around the paragraph */
-    border-radius: 8px; /* Rounds corners for a softer look */
+.page-title {
+  font-size: 3rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 3rem;
+  background: linear-gradient(135deg, #00d4ff 0%, #0099cc 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
-/* Media Queries for Responsiveness */
+.content {
+  background: #111111;
+  border: 1px solid #333333;
+  border-radius: 1rem;
+  padding: 3rem;
+  line-height: 1.8;
+  font-size: 1.1rem;
+  box-shadow: 0 8px 32px rgba(0, 212, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.content:hover {
+  box-shadow: 0 12px 48px rgba(0, 212, 255, 0.15);
+  transform: translateY(-2px);
+}
+
+.content p {
+  margin-bottom: 1.5rem;
+  color: #e0e0e0;
+  text-align: justify;
+}
+
+.content p:last-child {
+  margin-bottom: 0;
+}
+
+/* Responsive Design */
 @media (max-width: 768px) {
-    .about-section {
-        padding: 20px; 
-        margin: 40px 20px; 
-    }
+  .about-page {
+    padding: 1rem 0;
+  }
 
-    .about-section h2 {
-        font-size: 1.8rem; 
-    }
+  .container {
+    padding: 0 1rem;
+  }
 
-    .about-section p {
-        font-size: 1rem; 
-    }
+  .page-title {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .content {
+    padding: 2rem;
+    font-size: 1rem;
+  }
 }
 
-@media (max-width: 576px) {
-    .about-section {
-        padding: 15px; 
-        margin: 20px 10px; 
-    }
+@media (max-width: 480px) {
+  .page-title {
+    font-size: 2rem;
+  }
 
-    .about-section h2 {
-        font-size: 1.5rem;
-    }
-
-    .about-section p {
-        font-size: 0.9rem; 
-    }
+  .content {
+    padding: 1.5rem;
+    border-radius: 0.75rem;
+  }
 }

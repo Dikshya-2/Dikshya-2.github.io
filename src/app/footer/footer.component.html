@@ -1,41 +1,62 @@
-<footer class="container-fluid text-center py-4 footer-section">
-    <div class="row">
+<footer class="footer bg-dark text-white pt-5 pb-4">
+  <div class="container">
+    <div class="row g-4">
       <!-- Contact Information -->
-      <div class="col-md-4">
-        <h5><a routerLink="contact" class="text-decoration-none">Contact Me</a></h5>
-        <p>Email: <a [href]="'mailto:' + email">{{ email }}</a></p>
-        <p>phone: {{phone}}</p>
-        <p>Location: {{ location }}</p>
-      </div>
-  
-      <!-- Quick Links -->
-      <div class="col-md-4">
-        <h5>Quick Links</h5>
+      <div class="col-lg-4 col-md-6">
+        <h5 class="text-uppercase mb-4">
+          <a routerLink="contact" class="text-white text-decoration-none">Contact Me</a>
+        </h5>
         <ul class="list-unstyled">
-          <li><a routerLink="/">Home</a></li>
-          <li><a routerLink="contact">Contact</a></li>
-          <li><a routerLink="skills">Skills</a></li>
-          <li><a routerLink="about">About</a></li>
-          <li><a href="http://localhost:4200/" target="_blank">Portfolio</a></li>
+          <li class="mb-2">
+            <i class="bi bi-envelope me-2"></i>
+            <a href="mailto:dikshyasingh12@gmail.com" class="text-white">{{ email }}</a>
+          </li>
+          <li class="mb-2">
+            <i class="bi bi-telephone me-2"></i>
+            {{ phone }}
+          </li>
+          <li class="mb-2">
+            <i class="bi bi-geo-alt me-2"></i>
+            {{ location }}
+          </li>
         </ul>
       </div>
-  
+
+      <!-- Quick Links -->
+      <div class="col-lg-4 col-md-6">
+        <h5 class="text-uppercase mb-4">Quick Links</h5>
+        <ul class="list-unstyled">
+          <li class="mb-2"><a routerLink="/" class="text-white text-decoration-none">Home</a></li>
+          <li class="mb-2"><a routerLink="contact" class="text-white text-decoration-none">Contact</a></li>
+          <li class="mb-2"><a routerLink="skills" class="text-white text-decoration-none">Skills</a></li>
+          <li class="mb-2"><a routerLink="about" class="text-white text-decoration-none">About</a></li>
+          <li><a href="http://localhost:4200/" target="_blank" rel="noopener noreferrer" class="text-white text-decoration-none">Portfolio</a></li>
+        </ul>
+      </div>
+
       <!-- Social Links -->
-      <div class="col-md-4">
-        <h5>Follow Me</h5>
-        <div class="social-icons">
-          <a *ngFor="let link of socialLinks" [href]="link.url" target="_blank" rel="noopener noreferrer">
+      <div class="col-lg-4 col-md-12">
+        <h5 class="text-uppercase mb-4">Follow Me</h5>
+        <div class="social-icons d-flex justify-content-lg-start justify-content-md-center">
+          <a *ngFor="let link of socialLinks"
+             [href]="link.url"
+             target="_blank"
+             rel="noopener noreferrer"
+             [attr.aria-label]="link.name"
+             class="text-white me-3 fs-4">
             <i [class]="link.icon"></i>
           </a>
         </div>
       </div>
     </div>
-  
+
+    <hr class="my-4">
+
     <!-- Copyright -->
-    <div class="row mt-4">
-      <div class="col-12">
-        <p>&copy; 2024 Dikshya Singh Shah. All Rights Reserved.</p>
+    <div class="row">
+      <div class="col-12 text-center">
+        <p class="mb-0">&copy; {{ currentYear }} Dikshya Singh Shah. All Rights Reserved.</p>
       </div>
     </div>
-  </footer>
-  
+  </div>
+</footer>

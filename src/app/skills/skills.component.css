@@ -1,40 +1,61 @@
-.skill-section {
-    margin-bottom: 200px;
+:host {
+  display: block;
+  background-color: #121212;
+  color: #fff;
+  padding: 2rem;
+    padding-top: 80px;
+
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.category {
+  margin-bottom: 2.5rem;
+}
+
+.category-title {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #ccc;
+  border-left: 4px solid #4fc3f7;
+  padding-left: 10px;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  gap: 1rem;
+  align-items: center;
+}
+
+.skill-card {
+  background-color: #1e1e1e;
+  border-radius: 10px;
+  padding: 1rem;
+  text-align: center;
+  transition: transform 0.2s ease;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
+}
+
+.skill-card:hover {
+  transform: translateY(-5px);
 }
 
 .skill-icon {
-    width: 100%;                /* Full width of container */
-    height: 100px;              /* Fixed height */
-    object-fit: contain;        /* Maintains aspect ratio */
-    border: 1px solid #ddd; 
-    padding: 5px;    
-    background-color: #219c9c;
-    border-radius: 5px; 
-}
-
-h2 {
-    font-size: 2rem; 
-    text-align: center;
-    margin-bottom: 20px;
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  margin-bottom: 0.5rem;
 }
 
 .skill-name {
-    font-size: 1.1rem;
-    margin-top: 10px;
-}
-
-/* Media Queries for Responsiveness */
-@media (max-width: 768px) {
-    h2 {
-        font-size: 2rem;
-        
-    }
-    
-    .skill-icon {
-        height: 80px; 
-    }
-    
-    .skill-name {
-        font-size: 1rem;
-    }
+  display: block;
+  font-size: 0.95rem;
+  color: #f1f1f1;
 }

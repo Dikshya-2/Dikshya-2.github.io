@@ -13,89 +13,51 @@ import { RouterModule } from '@angular/router';
   styleUrl: './skills.component.css'
 })
 export class SkillsComponent {
-  skills: Skill[] = [
+skillCategories = [
     {
-      name: 'C#',
-      icon: '../assets/Csharp.png'
+      title: 'Frontend Development',
+      skills: [
+        { name: 'HTML', icon: '../assets/HTML.jpg' },
+        { name: 'CSS', icon: '../assets/Logo.jpg' },
+        { name: 'JavaScript', icon: '../assets/JavaScript-logo.png' },
+        { name: 'TypeScript', icon: '../assets/Typescript.png' },
+        { name: 'Angular', icon: '../assets/download.png' },
+        { name: 'Bootstrap', icon: '../assets/bootstrap.png' }
+      ]
     },
     {
-        name: 'Java',
-        icon: '../assets/Java.png' 
+      title: 'Backend Development',
+      skills: [
+        { name: '.NET', icon: '../assets/NET.jpg' },
+        { name: 'C#', icon: '../assets/Csharp.png' },
+        { name: 'PHP', icon: '../assets/images.png' },
+        { name: 'Python', icon: '../assets/python.svg' }
+      ]
     },
     {
-      name: 'JavaScript',
-      icon: '../assets/JavaScript-logo.png' 
-  },
-  {
-    name: 'Python',
-    icon: '../assets/python.svg' 
-},
-{
-  name: '.Net',
-  icon: '../assets/NET.jpg' 
-},
-{
-  name: 'PHP',
-  icon: '../assets/images.png' 
-},
-{
-  name: 'Postman',
-  icon: '../assets/postman.png' 
-},
-{
-  name: 'swagger',
-  icon: '../assets/swagger-logo-horizontal.jpeg' 
-},
-{
-  name: 'Angular',
-  icon: '../assets/download.png' 
-},
-{
-  name: 'Typescript',
-  icon: '../assets/Typescript.png' 
-},
-
-{
-  name: 'HTML',
-  icon: '../assets/HTML.jpg' 
-},
-{
-  name: 'CSS',
-    icon: '../assets/Logo.jpg' 
-
-},
-{
-  name: 'Bootstrap',
-    icon: '../assets/bootstrap.png' 
-    
-},
-{
-  name: 'SPSS',
-    icon: '../assets/spss.png' 
-},
-{
-  name: 'IoT',
-    icon: '../assets/IoT.png' 
-},
-{
-  name: 'cisco',
-    icon: '../assets/cisco.png' 
-},
-{
-  name: 'SQLite',
-    icon: '../assets/Sqlite.jpg' 
-},
-{
-  name: 'MS-SQL',
-    icon: '../assets/ms-sql.jpg' 
-},
-{
-  name: 'MySQL',
-    icon: '../assets/mysql.jpg' 
-},
-
-
-];
-
-
+      title: 'Mobile Development',
+      skills: [
+        { name: 'Java', icon: '../assets/Java.png' }
+        // Add Android if needed
+      ]
+    },
+    {
+      title: 'Databases',
+      skills: [
+        { name: 'MySQL', icon: '../assets/mysql.jpg' },
+        { name: 'MS-SQL', icon: '../assets/ms-sql.jpg' },
+        { name: 'SQLite', icon: '../assets/Sqlite.jpg' }
+      ]
+    },
+    {
+      title: 'Tools & Others',
+      skills: [
+        { name: 'Postman', icon: '../assets/postman.png' },
+        { name: 'Swagger', icon: '../assets/swagger-logo-horizontal.jpeg' },
+        { name: 'SPSS', icon: '../assets/spss.png' },
+        { name: 'IoT', icon: '../assets/IoT.png' },
+        { name: 'Cisco', icon: '../assets/cisco.png' }
+      ]
+    }
+  ];
 }

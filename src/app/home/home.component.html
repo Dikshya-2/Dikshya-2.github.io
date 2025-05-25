@@ -1,37 +1,93 @@
-<div class="container-fluid d-flex flex-column align-items-center justify-content-center text-center home-section">
-  <div class="row align-items-center">
-    <div class="col-md-6">
-      <h2>Hello, I’m</h2>
-      <h1>{{ name }}</h1>
-      <h3>{{ role }}</h3>
-      <p>{{ description }}</p>
-      <button (click)="toggleContact()" class="btn btn-primary btn-lg">
-        {{ isContactVisible ? 'Back to Home' : "Let's Talk" }}
-      </button>
-    </div>
-    <div class="col-md-6">
-      <img [src]="imageUrl" alt="Profile Picture" class="img-fluid rounded-circle" />
-    </div>
-  </div>
-  <div class="container">
-    <div class="row d-flex justify-content-end">
-      <div class="col-md-12">  
-        <section #aboutSection id="about"class="text-end about-section">
-          <app-about></app-about>
-        </section>
+<div class="home-container">
+  <!-- Hero Section -->
+  <section class="hero-section" id="hero">
+    <div class="hero-content">
+      <div class="hero-text">
+        <h1 class="hero-title">{{ title }}</h1>
+        <h2 class="hero-name">{{ name }}</h2>
+        <p class="hero-role">{{ role }}</p>
+        <p class="hero-description">{{ description }}</p>
+
+        <div class="hero-buttons">
+          <a routerLink="/contact" class="btn-primary">Get In Touch</a>
+          <a routerLink="/project" class="btn-secondary">View Projects</a>
+        </div>
+      </div>
+
+      <div class="hero-image">
+        <div class="image-container">
+          <img [src]="imageUrl" [alt]="name" class="profile-image" />
+          <div class="image-glow"></div>
+        </div>
       </div>
     </div>
 
-    <section #skillsSection id="skills">
-      <app-skills></app-skills>
-    </section>
+    <div class="scroll-indicator">
+      <div class="scroll-arrow">↓</div>
+      <span>Explore Portfolio</span>
+    </div>
+  </section>
 
-    <section #projectSection id="project">
-      <app-project></app-project>
-    </section>
-  
-    <section #contactSection id="contact">
-      <app-contact></app-contact>
-    </section>
-  </div>
+  <!-- Quick Navigation Section -->
+  <section class="navigation-section" id="navigation">
+    <div class="nav-grid">
+      <a routerLink="/about" class="nav-card">
+        <div class="nav-icon">👨‍💻</div>
+        <h3>About Me</h3>
+        <p>Learn about my background, education, and journey in programming</p>
+        <span class="nav-arrow">→</span>
+      </a>
+
+      <a routerLink="/skills" class="nav-card">
+        <div class="nav-icon">🛠️</div>
+        <h3>Technical Skills</h3>
+        <p>Explore the technologies and tools I work with</p>
+        <span class="nav-arrow">→</span>
+      </a>
+
+      <a routerLink="/project" class="nav-card">
+        <div class="nav-icon">🚀</div>
+        <h3>Projects</h3>
+        <p>View my portfolio of applications and development work</p>
+        <span class="nav-arrow">→</span>
+      </a>
+
+      <a routerLink="/contact" class="nav-card">
+        <div class="nav-icon">📧</div>
+        <h3>Contact</h3>
+        <p>Get in touch for internship opportunities or collaboration</p>
+        <span class="nav-arrow">→</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- Key Highlights -->
+  <section class="highlights-section" id="highlights">
+    <h2 class="section-title">Key Highlights</h2>
+    <div class="highlights-grid">
+      <div class="highlight-card">
+        <h3>🎓 Education</h3>
+        <p>Programming Student at TEC</p>
+        <span>Graduating May 2026</span>
+      </div>
+
+      <div class="highlight-card">
+        <h3>💼 Experience</h3>
+        <p>Full-Stack Development</p>
+        <span>Web & Mobile Applications</span>
+      </div>
+
+      <div class="highlight-card">
+        <h3>🔒 Specialization</h3>
+        <p>Security & Authentication</p>
+        <span>2FA & Identity Management</span>
+      </div>
+
+      <div class="highlight-card">
+        <h3>📊 Background</h3>
+        <p>Public Health Analytics</p>
+        <span>Biostatistics & Epidemiology</span>
+      </div>
+    </div>
+  </section>
 </div>

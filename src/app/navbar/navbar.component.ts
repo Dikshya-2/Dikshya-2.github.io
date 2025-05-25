@@ -17,6 +17,7 @@ import { HomeComponent } from "../home/home.component";
 })
 export class NavbarComponent {
   constructor(private viewportScroller: ViewportScroller, private router: Router) {}
+
   @Output() scrollTo = new EventEmitter<string>();
 
   navigateTo(section: string) {
@@ -24,9 +25,8 @@ export class NavbarComponent {
       this.router.navigate(['/']).then(() => {
           this.viewportScroller.scrollToAnchor(section);
       });
-  } else {
+    } else {
       this.viewportScroller.scrollToAnchor(section);
-  }
+    }
   }
 }
- 

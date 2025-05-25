@@ -56,4 +56,8 @@ export class ProjectComponent {
       image:  '../assets/webshop.PNG'
     }
   ];
+
+  trackByProject(index: number, project: Project): string {
+    return project.title;
+  }
 }
