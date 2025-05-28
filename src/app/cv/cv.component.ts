@@ -24,20 +24,19 @@ export class CVComponent {
   { icon: 'bi bi-linkedin', text: 'www.linkedin.com/me' },
   { icon: 'bi bi-github', text: 'www.github.com/dikshya' },
   { icon: '', text: 'ER ikke ryger' },
- 
+
   ];
 
   education = [
-    { year: '2020-2026', degree: 'Datatekniker med speciale i programmering ', institution: 'Technical Education Copenhagen, Ballerup' },
-  //  { year: '2019-2020', degree: '9 Klasse afgangseksamen', institution: 'VUC Lyngby' },
-    { year: '2008-2011', degree: 'Bachelors in Public Health', institution: 'Hope International College, Nepal' },
+    { year: '2020-2026', degree: 'Data Technician specializing in Programming', institution: 'Technical Education Copenhagen, Ballerup' },
+    { year: '2008-2011', degree: 'Bachelor’s in Public Health', institution: 'Hope International College, Nepal' },
   ];
 
   languages = [
-    'Flydende Engelsk, Nepalesisk, Urdu, Hindi (taler og skrive).',
-    'Professionelt Dansk (taler og skrive).',
-    'Nepali: Flydende',
-    'Kørekort til almindelig personbil',
+    'Fluent in English, Nepali, Urdu, Hindi (spoken and written).',
+    'Professional Danish (spoken and written).',
+    'Nepali: Fluent',
+    'Driving license for regular passenger car',
   ];
 
   skills = [
@@ -52,10 +51,26 @@ export class CVComponent {
   ];
 
   experience = [
-    { year: '2021-nu', role: 'Erfaring med både backend- og frontend-udvikling. Jeg har arbejdet med SQL-databaser, C# og objektorienteret design, samt Angular og ASP.NET. Jeg har udviklet webapplikationer med teknologier som WPF, Blazor og JavaScript. Et af mine projekter som en casino-hjemmeside med bruger- og adminfunktioner. Jeg sikrer kodekvalitet med XUnit-tests.', company: 'Technical Education Copenhagen, Hvidover' },
-    { year: '2022- 2024',	role: 'Tilberedte og servering nærende måltider til Patienter. Udviklede evnen til at arbejde under pres og levere kvalitetssikrede resultater.',  company: 'Hospitalsmedhjælper i Herlev hospital. ||Deltid (hver anden weekend)'},
-    { year: '2012-2014', role: 'Distrikt Projektkoordinator', company: 'Ipas-Nepal, Kathmandu, Nepal' },
-    { year: '2011-2012', role: 'Distrikt Projektkoordinator', company: 'SOURCE-Nepal, Doti (NGO)' },
+    {
+      year: '2021–Present',
+      role: 'Experience in both backend and frontend development. I have worked with SQL databases, C#, and object-oriented design, as well as Angular and ASP.NET. I have developed web applications using technologies like WPF, Blazor, and JavaScript. One of my projects was a Biograf website with user and admin features. I ensure code quality with XUnit tests.',
+      company: 'Technical Education Copenhagen, Hvidovre'
+    },
+    {
+      year: '2022–2024',
+      role: 'Prepared and served nutritious meals to patients. Developed the ability to work under pressure and deliver high-quality results.',
+      company: 'Hospital Assistant at Herlev Hospital (Part-time, every other weekend)'
+    },
+    {
+      year: '2012–2014',
+      role: 'District Project Coordinator',
+      company: 'Ipas-Nepal, Kathmandu, Nepal'
+    },
+    {
+      year: '2011–2012',
+      role: 'District Project Coordinator',
+      company: 'SOURCE-Nepal, Doti (NGO)'
+    },
   ];
 
   workshops = [
@@ -64,5 +79,6 @@ export class CVComponent {
     { year: '2013', details: 'ToT on ASRH, Chitwan, Nepal' },
     { year: '2012', details: 'Advocacy training workshop, Doti, Nepal by Save the Children' },
   ];
-  fritidsinteresser= ['Jeg nyder svømme, spille basketball, badminton og samt at tilbringe tid med venner og familie.'];
+  fritidsinteresser= ['I enjoy swimming, playing basketball and badminton, and spending time with friends and family.'
+];
 }
