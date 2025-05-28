@@ -47,7 +47,7 @@ export class ProjectComponent {
       title: 'Webshop 2',
       description: 'An online shopping platform.',
       link: 'https://github.com/H1-H3-Programmering/project002-matthias-dikshya',
-      image:  '../assets/webshop.PNG'
+      image:  '../assets/Screenshot.png'
     },
     {
       title: 'Webshop',

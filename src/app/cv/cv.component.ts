@@ -23,7 +23,7 @@ export class CVComponent {
   { icon: 'fa-birthday-cake', text: '13.01.1991' },
   { icon: 'bi bi-linkedin', text: 'www.linkedin.com/me' },
   { icon: 'bi bi-github', text: 'www.github.com/dikshya' },
-  { icon: '', text: 'ER ikke ryger' },
+  { icon: '', text: 'Non-smoker' },
 
   ];
 
@@ -35,7 +35,6 @@ export class CVComponent {
   languages = [
     'Fluent in English, Nepali, Urdu, Hindi (spoken and written).',
     'Professional Danish (spoken and written).',
-    'Nepali: Fluent',
     'Driving license for regular passenger car',
   ];
 
