@@ -23,8 +23,8 @@ jobs:
         run: npm install
 
       - name: Build Angular app
-        run: npx ng build --configuration production --output-path=dist/portfolio --base-href "/Dikshya-2.github.io/"
-
+        run: ng build --configuration production --output-path=dist/portfolio --base-href "/"
+        
       - name: Create CNAME
         run: echo "dikshya-2.github.io" > dist/portfolio/CNAME
 
