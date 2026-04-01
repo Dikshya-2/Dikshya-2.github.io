@@ -22,7 +22,7 @@ export class NavbarComponent {
 
   navigateTo(section: string) {
     if (this.router.url !== '/') {
-      this.router.navigate(['']).then(() => {
+      this.router.navigate(['/']).then(() => {
           this.viewportScroller.scrollToAnchor(section);
       });
     } else {
