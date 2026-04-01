@@ -19,9 +19,6 @@ jobs:
         with:
           node-version: '22.x'
 
-      - name: Install Angular CLI
-        run: npm install -g @angular/cli
-
       - name: Install dependencies
         run: npm install
 
@@ -35,4 +32,4 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist/portfolio/browser
+          publish_dir: ./dist/portfolio
