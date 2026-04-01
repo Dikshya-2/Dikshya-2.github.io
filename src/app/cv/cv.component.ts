@@ -12,15 +12,15 @@ import { RouterModule } from '@angular/router';
 export class CVComponent {
   profile = {
     name: 'DIKSHYA SINGH SHAH',
-    description: 'Aspiring Full Stack Developer',
-    imageUrl: 'assets/image_50400513.JPG',
+    description: 'Junior Full Stack Developer',
+    imageUrl: 'assets/dikskya_id21_01.JPG',
   };
 
   contactInfo = [
-  { icon: 'fa-map-marker', text: 'Lyngby Hovedgade 106 st.mf, 2800 Lyngby' },
+  { icon: 'fa-map-marker', text: '2800 Lyngby' },
   { icon: 'bi bi-phone', text: '+45 22221844' },
   { icon: 'bi bi-envelope', text: 'dikshyasingh12@gmail.com' },
-  { icon: 'fa-birthday-cake', text: '13.01.1991' },
+  { icon: 'fa-birthday-cake', text: '1991' },
   { icon: 'bi bi-linkedin', text: 'www.linkedin.com/me' },
   { icon: 'bi bi-github', text: 'www.github.com/dikshya' },
   { icon: '', text: 'Non-smoker' },
@@ -29,6 +29,7 @@ export class CVComponent {
 
   education = [
     { year: '2020-2026', degree: 'Data Technician specializing in Programming', institution: 'Technical Education Copenhagen, Ballerup' },
+    { year: '2015-2019', degree: 'Danish Language & VUC Education', institution: 'ia sporgschool and VUC Lyngby' },
     { year: '2008-2011', degree: 'Bachelor’s in Public Health', institution: 'Hope International College, Nepal' },
   ];
 
@@ -56,7 +57,7 @@ export class CVComponent {
       company: 'Technical Education Copenhagen, Hvidovre'
     },
     {
-      year: '2022–2024',
+      year: '2022–2025',
       role: 'Prepared and served nutritious meals to patients. Developed the ability to work under pressure and deliver high-quality results.',
       company: 'Hospital Assistant at Herlev Hospital (Part-time, every other weekend)'
     },

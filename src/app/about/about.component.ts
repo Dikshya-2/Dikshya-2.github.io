@@ -49,13 +49,15 @@ export class AboutComponent {
     }
   ];
 
-  description: string = `
-    <p>I am a 33-year-old programming student at TEC with experience in both web and mobile application development. I have developed mobile applications using Java in Android Studio and created web applications using .NET for the backend and Angular for the frontend. With a bachelor's degree in public health focused on biostatistics and epidemiology, I bring strong analytical skills to my programming journey.</p>
+description: string = `
+<p>
+Programming graduate from TEC with a strong interest in full-stack development and secure applications.
+I enjoy building scalable solutions and am looking for a <strong>Junior Developer</strong> role where I can make an impact and grow my expertise.
+</p>
+<p>I have experience building both mobile and web applications. I have developed Android applications using Java in Android Studio and created full-stack web applications using .NET for backend development and Angular for frontend development.</p>
+<p>As part of my development experience, I independently built a full-stack web application with secure authentication using ASP.NET Identity. The system includes Two-Factor Authentication (2FA) with SMTP email verification and Google Authenticator. The project was developed using Agile principles and structured into five development phases to maintain focus, progress tracking, and continuous improvement.</p>
+<p>In addition to my programming education, I hold a bachelor's degree in Public Health with a focus on biostatistics and epidemiology. This background strengthens my analytical thinking and problem-solving skills when designing and developing software solutions.</p>
+<p>I am passionate about technology, problem-solving, and building practical applications. I am motivated to contribute to a development team, learn from experienced developers, and continue developing my skills as a full-stack software developer.</p>
+`;
 
-    <p>Recently, I developed a full-stack web application independently, implementing secure login using ASP.NET Identity, along with Two-Factor Authentication (2FA) using SMTP email confirmation and Google Authenticator. I applied Agile methodology, breaking the project into five structured development phases to ensure focus, progress tracking, and continuous improvement.</p>
-
-    <p>I am currently preparing for my final exam in February 2026 and will complete my education in May 2026. I am actively seeking an internship opportunity where I can apply my skills, contribute to real-world projects, and continue learning alongside experienced developers.</p>
-
-    <p>I am ambitious and passionate about technology, programming, and problem-solving, and I'm committed to building smart, user-friendly applications that solve real challenges.</p>
-  `;
 }

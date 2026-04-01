@@ -1,15 +1,12 @@
-/* Container */
 .home-container {
   max-width: 100%;
   margin: 0 auto;
   padding: 1rem;
    padding-top: 100px;
   color: #eee;
-  background-color: #121212; /* Dark mode background */
+  background-color: #121212;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-
-/* HERO SECTION */
 .hero-section {
   display: flex;
   flex-direction: column;
@@ -17,7 +14,6 @@
   padding: 2rem 1rem;
   text-align: center;
   position: relative;
-
 }
 
 .hero-content {
@@ -130,7 +126,6 @@
   pointer-events: none;
 }
 
-/* Scroll indicator */
 .scroll-indicator {
   margin-top: 2rem;
   color: #ffa726;
@@ -151,7 +146,6 @@
   50% { transform: translateY(10px); }
 }
 
-/* NAVIGATION SECTION */
 .navigation-section {
   margin: 3rem 0;
 }
@@ -172,8 +166,11 @@
   color: #eee;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
   height: 100%;
+  align-items: center;
+  text-decoration: none;
+  color: inherit;
 }
 
 .nav-card:hover {
@@ -203,7 +200,6 @@
   font-size: 0.9rem;
 }
 
-/* HIGHLIGHTS SECTION */
 .highlights-section {
   margin-bottom: 3rem;
   text-align: center;
@@ -250,7 +246,6 @@
   color: #bbb;
 }
 
-/* Responsive adjustments */
 @media (max-width: 768px) {
   .hero-content {
     flex-direction: column;
@@ -269,3 +264,4 @@
     grid-template-columns: 1fr;
   }
 }
+
