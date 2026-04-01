@@ -26,13 +26,13 @@ jobs:
         run: npm install
 
       - name: Build Angular app
-        run: ng build --configuration production --output-path=dist/portfolio/browser --base-href "/Dikshya-2.github.io/"
+        run: ng build --configuration production --output-path=dist/portfolio --base-href "/Dikshya-2.github.io/"
 
       - name: Create CNAME
-        run: echo "dikshya-2.github.io" > dist/portfolio/browser/CNAME
+        run: echo "dikshya-2.github.io" > dist/portfolio/CNAME
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist/portfolio/browser
+          publish_dir: ./dist/portfolio
