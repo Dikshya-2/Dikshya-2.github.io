@@ -22,9 +22,6 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Clean dist folder
-        run: rm -rf dist/portfolio
-
       - name: Build Angular app
         run: ng build --configuration production --output-path=dist/portfolio --base-href "/Dikshya-2.github.io/"
 
