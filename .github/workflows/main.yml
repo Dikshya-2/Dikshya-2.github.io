@@ -17,6 +17,9 @@ jobs:
 
       - run: npm install
 
+      # 🔥 ADD THIS LINE
+      - run: npm install -g @angular/cli
+
       - run: ng build --configuration production --output-path=dist/portfolio --base-href "/"
 
       - uses: peaceiris/actions-gh-pages@v3
