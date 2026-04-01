@@ -2,9 +2,7 @@ name: Build and Deploy
 
 on:
   push:
-    branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
+    branches: ["main"]
 
 jobs:
   build:
@@ -17,16 +15,13 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '22.x'
+          node-version: '22'
 
       - name: Install dependencies
         run: npm install
 
       - name: Build Angular app
         run: ng build --configuration production --output-path=dist/portfolio --base-href "/"
-        
-      - name: Create CNAME
-        run: echo "dikshya-2.github.io" > dist/portfolio/CNAME
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
