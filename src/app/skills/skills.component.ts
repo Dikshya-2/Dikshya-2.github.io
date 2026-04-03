@@ -38,7 +38,6 @@ skillCategories = [
       title: 'Mobile Development',
       skills: [
         { name: 'Java', icon: '../assets/Java.png' }
-        // Add Android if needed
       ]
     },
     {
@@ -61,3 +60,5 @@ skillCategories = [
     }
   ];
 }
+
+

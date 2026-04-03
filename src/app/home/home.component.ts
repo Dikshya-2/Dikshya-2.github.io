@@ -29,7 +29,6 @@ export class HomeComponent {
     and Agile-based project management. I am eager to contribute to real-world projects, collaborate with
     experienced teams, and continue growing as a professional developer.
   `;
-  // imageUrl = 'assets/dikskya_id21_01.JPG';
   imageUrl = './assets/dikskya_id21_01.JPG';
 
   navigateToSection(sectionId: string) {

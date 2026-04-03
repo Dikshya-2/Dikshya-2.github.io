@@ -14,7 +14,7 @@ export class ContactComponent {
   email: string = 'dikshyasingh12@gmail.com';
   name: string = 'Dikshya Singh Shah';
   phone: string= '+45 22221844';
-  location: string = 'Lyngby Hovedgade 106, 2800 Lyngby, Denmark';
+  location: string = '2800 Lyngby, Denmark';
 
   constructor(private fb: FormBuilder) {
     this.contactForm = this.fb.group({
@@ -27,8 +27,7 @@ export class ContactComponent {
   onSubmit() {
     if (this.contactForm.valid) {
       console.log('Form Submitted!', this.contactForm.value);
-      // Here you can handle the form submission, e.g., send data to a server
-      this.contactForm.reset(); // Reset the form after submission if needed
+      this.contactForm.reset();
     } else {
       console.log('Form is invalid');
     }
