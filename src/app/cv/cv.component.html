@@ -1,93 +1,89 @@
 <div class="container my-5">
-    <div class="row">
-      <!-- Left Side -->
-      <div class="col-md-4 bg-blue text-white p-4">
-        <!-- Profile Section -->
-        <div class="text-center mb-4">
-          <div class="rounded-circle overflow-hidden mx-auto mb-3" style="width: 150px; height: 150px;">
-            <img [src]="profile.imageUrl" alt="Profile Picture" class="img-fluid" />
-          </div>
-          <h3 class="fw-bold">{{ profile.name }}</h3>
-          <p>{{ profile.description }}</p>
+  <div class="row shadow-lg rounded overflow-hidden">
+
+    <!-- LEFT SIDE -->
+    <div class="col-md-4 left-panel text-white p-4">
+
+      <!-- Profile -->
+      <div class="text-center mb-4">
+        <div class="profile-img mx-auto mb-3">
+          <img [src]="profile.imageUrl" alt="Profile" />
         </div>
-  
-        <!-- Contact Info -->
-        <div class="mb-4">
-          <h5 class="text-uppercase mb-3">Contact Info</h5>
-          <ul class="list-unstyled">
-            <li *ngFor="let contact of contactInfo" class="d-flex align-items-center mb-2">
-              <i class="fa me-2" [ngClass]="contact.icon" aria-hidden="true"></i>
-              <span>{{ contact.text }}</span>
-            </li>
-          </ul>
-        </div>
-  
-        <!-- Education Section -->
-        <div class="mb-4">
-          <h5 class="text-uppercase mb-3">Education</h5>
-          <ul class="list-unstyled">
-            <li *ngFor="let edu of education" class="mb-3">
-              <h6 class="text-warning">{{ edu.year }}</h6>
-              <p class="fw-bold">{{ edu.degree }}</p>
-              <p>{{ edu.institution }}</p>
-            </li>
-          </ul>
-        </div>
-  
-        <!-- Languages Section -->
-        <div class="mb-4">
-          <h5 class="text-uppercase mb-3">Languages & Driving License</h5>
-          <ul class="list-unstyled">
-            <li *ngFor="let language of languages" class="mb-1">{{ language }}</li>
-          </ul>
-        </div>
-  
-        <!-- Skills Section -->
-        <div class="mb-4">
-            <h5 class="text-uppercase mb-3">Skills</h5>
-            <div class="skills-badges">
-              <span *ngFor="let skill of skills" class="badge bg-secondary me-2 mb-2">{{ skill }}</span>
-            </div>
+        <h3 class="fw-bold">{{ profile.name }}</h3>
+        <p>{{ profile.description }}</p>
+      </div>
+
+      <!-- Contact -->
+      <div class="mb-4">
+        <h5 class="section-title">Contact</h5>
+        <ul class="list-unstyled">
+          <li *ngFor="let c of contactInfo" class="mb-2">
+            <i [class]="c.icon + ' me-2'"></i>{{ c.text }}
+          </li>
+        </ul>
+      </div>
+
+      <!-- Skills -->
+      <div class="mb-4">
+        <h5 class="section-title">Skills</h5>
+        <div class="d-flex flex-wrap">
+          <span *ngFor="let skill of skills" class="badge bg-light text-dark me-2 mb-2">
+            {{ skill }}
+          </span>
         </div>
       </div>
-  
-      <!-- Right Side -->
-      <div class="col-md-8 bg-light p-4">
-        <!-- Profile Description -->
-        <div class="mb-5">
-          <h4 class="text-primary text-uppercase">Ambitious and Engaged Data Technician in Programming</h4>
-          <p>
-            Passionate about both backend and frontend development. Ready to contribute technical skills, creative problem-solving, and collaboration in a dynamic work environment.
-          </p>
-        </div>
-  
-        <!-- Experience Section -->
-        <div class="mb-5">
-          <h4 class="text-primary text-uppercase">Work Experience</h4>
-          <div *ngFor="let exp of experience" class="border-bottom pb-3 mb-3">
-            <h6 class="text-secondary">{{ exp.year }}</h6>
-            <p class="fw-bold">{{ exp.company }}</p>
-            <p>{{ exp.role }}</p>
-          </div>
-        </div>
-  
-        <!-- Workshops Section --> 
-        <div class="mb-4">
-            <h4 class="text-primary text-uppercase">Workshops</h4>
-            <div *ngFor="let workshop of workshops">
-              <h6 class="text-secondary">{{ workshop.year }}</h6>
-              <p >{{ workshop.details }}</p>
-            </div>
-        </div>
-  
-        <!-- Hobbies Section -->
-        <div class="mb-4">
-          <h5 class="text-uppercase mb-3">Hobbies</h5>
-          <ul class="list-unstyled">
-            <li *ngFor="let interest of fritidsinteresser" class="mb-1">{{ interest }}</li>
-          </ul>
-        </div>
+
+      <!-- Languages -->
+      <div>
+        <h5 class="section-title">Languages</h5>
+        <ul class="list-unstyled">
+          <li *ngFor="let lang of languages">{{ lang }}</li>
+        </ul>
       </div>
+
     </div>
+
+    <!-- RIGHT SIDE -->
+    <div class="col-md-8 bg-light p-4">
+
+      <!-- Profile -->
+      <div class="mb-5">
+        <h4 class="text-primary section-heading">Profile</h4>
+        <p>{{ profileSummary }}</p>
+      </div>
+
+      <!-- Experience -->
+      <div class="mb-5">
+        <h4 class="text-primary section-heading">Work Experience</h4>
+
+        <div *ngFor="let exp of experience" class="mb-4">
+          <h6 class="text-secondary">{{ exp.year }}</h6>
+          <p class="fw-bold">{{ exp.title }} – {{ exp.company }}</p>
+
+          <ul>
+            <li *ngFor="let p of exp.points">{{ p }}</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Education -->
+      <div class="mb-5">
+        <h4 class="text-primary section-heading">Education</h4>
+
+        <div *ngFor="let edu of education" class="mb-3">
+          <h6 class="text-secondary">{{ edu.year }}</h6>
+          <p class="fw-bold">{{ edu.degree }}</p>
+          <p>{{ edu.institution }}</p>
+        </div>
+      </div>
+
+      <!-- Fun Fact -->
+      <div>
+        <h4 class="text-primary section-heading">Fun Fact</h4>
+        <p>{{ funFact }}</p>
+      </div>
+
+    </div>
+
   </div>
-  
+</div>
