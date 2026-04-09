@@ -1,88 +1,65 @@
-<div class="projects-container">
-  <div class="projects-header">
-    <h1 class="page-title">Featured Projects</h1>
-    <p class="page-subtitle">A showcase of my development work and technical skills</p>
+<div class="container py-5">
+  <!-- Header -->
+  <div class="text-center mb-5">
+    <h1 class="display-4 text-gradient">Featured Projects</h1>
+    <p class="text-muted">A showcase of my development work and technical skills</p>
   </div>
 
-  <div class="projects-grid">
-    <div class="project-card" *ngFor="let project of projects; trackBy: trackByProject">
-      <div class="project-image">
-        <img [src]="project.image" [alt]="project.title" class="project-img">
-        <div class="project-overlay">
-          <a [href]="project.link" target="_blank" class="view-project-btn">
-            <span>View Project</span>
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-              <polyline points="15,3 21,3 21,9"></polyline>
-              <line x1="10" y1="14" x2="21" y2="3"></line>
-            </svg>
+  <!-- Projects Grid -->
+  <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+    <div *ngFor="let project of projects; trackBy: trackByProject" class="col">
+      <div class="card h-100 bg-dark text-white border-secondary">
+        <div class="position-relative">
+          <!-- <img [src]="project.image" [alt]="project.title" class="card-img-top"> -->
+          <div class="project-image">
+  <img [src]="project.image" [alt]="project.title" class="project-img">
+</div>
+          <a [href]="project.link" target="_blank" class="position-absolute top-50 start-50 translate-middle btn btn-primary">
+            View Project
           </a>
         </div>
-      </div>
+        <div class="card-body">
+          <h5 class="card-title">{{ project.title }}</h5>
+          <p class="card-text">{{ project.description }}</p>
 
-      <div class="project-content">
-        <h3 class="project-title">{{ project.title }}</h3>
-        <p class="project-description">{{ project.description }}</p>
+          <!-- Technologies -->
+          <div class="mb-3">
+            <span *ngFor="let tech of project.technologies" class="badge bg-info text-dark me-1 mb-1">{{ tech }}</span>
+          </div>
 
-        <div class="project-tech" [ngSwitch]="project.title">
-          <div *ngSwitchCase="'3FA Login With Hashing'" class="tech-tags">
-            <span class="tech-tag">C#</span>
-            <span class="tech-tag">.NET</span>
-            <span class="tech-tag">Security</span>
-            <span class="tech-tag">Authentication</span>
-          </div>
-          <div *ngSwitchCase="'Mobile App In Java'" class="tech-tags">
-            <span class="tech-tag">Java</span>
-            <span class="tech-tag">Android</span>
-            <span class="tech-tag">IntelliJ IDEA</span>
-            <span class="tech-tag">H2-Database</span>
-            <span class="tech-tag">Mobile</span>
-          </div>
-          <div *ngSwitchCase="'Movie Web App'" class="tech-tags">
-            <span class="tech-tag">Web Development</span>
-            <span class="tech-tag">Angular</span>
-            <span class="tech-tag">Bootstrap</span>
-            <span class="tech-tag">API</span>
-          </div>
-          <div *ngSwitchCase="'Arduino Projects'" class="tech-tags">
-            <span class="tech-tag">IoT</span>
-            <span class="tech-tag">Arduino</span>
-            <span class="tech-tag">Hardware</span>
-          </div>
-          <div *ngSwitchDefault class="tech-tags">
-            <span class="tech-tag">Web Development</span>
-            <span class="tech-tag">Full Stack</span>
-          </div>
+          <a [href]="project.link" target="_blank" class="text-info">View on GitHub →</a>
         </div>
-
-        <a [href]="project.link" target="_blank" class="project-link">
-          View on GitHub →
-        </a>
       </div>
     </div>
   </div>
 
-  <div class="projects-stats">
-    <div class="stat-card">
-      <div class="stat-number">{{ projects.length }}</div>
-      <div class="stat-label">Projects Completed</div>
+  <!-- Stats -->
+  <div class="row text-center my-5">
+    <div class="col-md-4 mb-3">
+      <div class="p-4 bg-secondary rounded">
+        <h2 class="text-info">{{ projects.length }}</h2>
+        <p>Projects Completed</p>
+      </div>
     </div>
-    <div class="stat-card">
-      <div class="stat-number">5+</div>
-      <div class="stat-label">Technologies Used</div>
+    <div class="col-md-4 mb-3">
+      <div class="p-4 bg-secondary rounded">
+        <h2 class="text-info">5+</h2>
+        <p>Technologies Used</p>
+      </div>
     </div>
-    <div class="stat-card">
-      <div class="stat-number">100%</div>
-      <div class="stat-label">GitHub Hosted</div>
+    <div class="col-md-4 mb-3">
+      <div class="p-4 bg-secondary rounded">
+        <h2 class="text-info">100%</h2>
+        <p>GitHub Hosted</p>
+      </div>
     </div>
   </div>
 
-  <div class="cta-section">
-    <h2>Interested in Working Together?</h2>
-    <p>Let's discuss how I can contribute to your next project</p>
-    <div class="cta-buttons">
-      <button class="btn-primary" routerLink="/contact">Get In Touch</button>
-      <button class="btn-secondary" routerLink="/skills">View Skills</button>
-    </div>
+  <!-- Call to Action -->
+  <div class="text-center py-5 px-3 bg-dark rounded">
+    <h2 class="mb-3 text-white">Interested in Working Together?</h2>
+    <p class="text-muted mb-4">Let's discuss how I can contribute to your next project</p>
+    <a routerLink="/contact" class="btn btn-info me-2 mb-2">Get In Touch</a>
+    <a routerLink="/skills" class="btn btn-outline-info mb-2">View Skills</a>
   </div>
 </div>

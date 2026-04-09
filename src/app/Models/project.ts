@@ -3,4 +3,7 @@ export interface Project {
     description: string;
     link: string;
     image: string;
+    role?: string;
+    technologies?: string[];
+    features?: string[];
   }
