@@ -41,7 +41,9 @@ export class ProjectComponent {
     {
       title: 'Mobile App In Java',
       description: 'A full-stack food ordering app using Java for the backend IntelliJ IDEA and Android for the frontend, with H2 as the database.',
-      link: 'https://github.com/Dikshya-2/webshop',
+      link: [
+        'https://github.com/Dikshya-2/webshop','https://github.com/Dikshya-2/webshopAndroidApp'
+      ],
       image: '/assets/Food.jpg'
     },
     {

@@ -16,18 +16,14 @@ import { ProjectComponent } from "../project/project.component";
   styleUrl: './home.component.css'
 })
 export class HomeComponent {
- title = 'Welcome to My Portfolio';
-  name = 'Dikshya Singh Shah';
-  role = 'Junior Full Stack Developer';
+ title = 'Hi,';
+  name = 'I\'m Dikshya';
+  role = 'Junior Full-Stack Developer';
   description = `
-    I am a passionate Full-Stack Developer with experience in both frontend and backend technologies.
-    I specialize in building dynamic, secure, and user-friendly web and mobile applications using Angular,
-    .NET, and Java for Android. With a background in Public Health (Biostatistics & Epidemiology),
-    I bring strong analytical and problem-solving skills to software development.
+I build secure, user-friendly web and mobile applications using Angular, ASP.NET Core, SQL, and Java.
 
-    I have developed full-stack applications with secure authentication, Two-Factor Authentication (2FA),
-    and Agile-based project management. I am eager to contribute to real-world projects, collaborate with
-    experienced teams, and continue growing as a professional developer.
+With a background in Public Health and Biostatistics, I bring analytical thinking and problem-solving skills into software development. I enjoy creating practical solutions, learning new technologies, and growing as a developer.
+
   `;
   imageUrl = './assets/dikskya_id21_01.JPG';
 
