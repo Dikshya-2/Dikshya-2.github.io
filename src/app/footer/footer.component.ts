@@ -17,6 +17,6 @@ export class FooterComponent {
   socialLinks = [
     { name: 'GitHub', url: 'https://github.com/Dikshya-2', icon: 'bi bi-github' },
     { name: 'LinkedIn', url: 'https://www.linkedin.com/in/dikshya-singh-shah-72b46391/', icon: 'bi bi-linkedin' },
-    { name: 'Portfolio', url: 'http://localhost:4200/', icon: 'fas fa-user' }
+    { name: 'Portfolio', url: 'https://dikshya-2.github.io/', icon: 'fas fa-user' }
   ];
 }
