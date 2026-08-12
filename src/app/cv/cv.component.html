@@ -1,79 +1,211 @@
-<div class="container">
-  <div class="row shadow-lg rounded overflow-hidden">
+<div class="cv-page">
+  <div class="cv">
+    <aside class="sidebar">
 
-    <div class="col-md-4 left-panel text-white p-4">
+      <!-- Profile Photo -->
+      <div class="sidebar-profile">
 
-      <div class="text-center mb-4">
-        <div class="profile-img mx-auto mb-3">
-          <img [src]="profile.imageUrl" alt="Profile" />
+        <div class="profile-img">
+          <img
+            [src]="profile.imageUrl"
+            [alt]="profile.name"
+          />
         </div>
-        <h3 class="fw-bold">{{ profile.name }}</h3>
-        <p>{{ profile.description }}</p>
       </div>
 
-      <div class="mb-4">
-        <h5 class="section-title">Contact</h5>
-        <ul class="list-unstyled">
-          <li *ngFor="let c of contactInfo" class="mb-2">
-            <i [class]="c.icon + ' me-2'"></i>{{ c.text }}
-          </li>
-        </ul>
-      </div>
+      <section class="side-section">
+        <h3>Contact</h3>
+        <div class="side-line"></div>
+        <div class="contact-list">
+          <div
+            *ngFor="let contact of contactInfo"
+            class="contact-item"
+          >
+            <i [class]="contact.icon"></i>
+            <a
+              *ngIf="contact.link"
+              [href]="contact.link"
+              [target]="contact.external ? '_blank' : null"
+              [rel]="contact.external ? 'noopener noreferrer' : null"
+            >
+              {{ contact.text }}
+            </a>
 
-      <div class="mb-4">
-        <h5 class="section-title">Skills</h5>
-        <div class="d-flex flex-wrap">
-          <span *ngFor="let skill of skills" class="badge bg-light text-dark me-2 mb-2">
-            {{ skill }}
+            <span *ngIf="!contact.link">
+              {{ contact.text }}
+            </span>
+          </div>
+        </div>
+      </section>
+
+      <section class="side-section">
+        <h3>Skills</h3>
+        <div class="side-line"></div>
+        <div class="skill-groups">
+          <div
+            *ngFor="let group of skillGroups"
+            class="skill-group"
+          >
+            <h4>
+              {{ group.title }}
+            </h4>
+            <p>
+              {{ group.skills }}
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="side-section">
+        <h3>Languages</h3>
+        <div class="side-line"></div>
+        <div class="languages-list">
+          <div
+            *ngFor="let language of languages"
+          >
+            {{ language }}
+          </div>
+        </div>
+      </section>
+
+      <section class="side-section">
+        <h3>Driving License</h3>
+        <div class="side-line"></div>
+        <div class="driving-license-list">
+          <div
+            *ngFor="let license of drivingLicense"
+          >
+            {{ license }}
+          </div>
+        </div>
+      </section>
+    </aside>
+
+    <main class="main-content">
+      <header class="cv-header">
+        <h1>
+          {{ profile.name }}
+        </h1>
+        <p class="main-role">
+          <span class="role-main">
+            Software Engineer
           </span>
+          <span class="role-tech">
+            (.NET | Angular | Python)
+          </span>
+        </p>
+      </header>
+
+      <section class="cv-section">
+        <div class="section-heading">
+          <h2>
+            Profile
+          </h2>
         </div>
-      </div>
 
-      <div>
-        <h5 class="section-title">Languages</h5>
-        <ul class="list-unstyled">
-          <li *ngFor="let lang of languages">{{ lang }}</li>
-        </ul>
-      </div>
+        <p class="profile-text">
+          {{ profileSummary }}
+        </p>
+      </section>
 
-    </div>
-
-    <div class="col-md-8 bg-light p-4">
-
-      <div class="mb-5">
-        <h4 class="text-primary section-heading">Profile</h4>
-        <p>{{ profileSummary }}</p>
-      </div>
-
-      <div class="mb-5">
-        <h4 class="text-primary section-heading">Work Experience</h4>
-
-        <div *ngFor="let exp of experience" class="mb-4">
-          <h6 class="text-secondary">{{ exp.year }}</h6>
-          <p class="fw-bold">{{ exp.title }} – {{ exp.company }}</p>
-
-          <ul>
-            <li *ngFor="let p of exp.points">{{ p }}</li>
-          </ul>
+      <section class="cv-section">
+        <div class="section-heading">
+          <h2>
+            Work Experience
+          </h2>
         </div>
-      </div>
+        <div
+          *ngFor="let exp of experience"
+          class="experience-item"
+        >
+          <!-- Date -->
+          <div class="experience-date">
+            {{ exp.year }}
+          </div>
 
-      <div class="mb-5">
-        <h4 class="text-primary section-heading">Education</h4>
-
-        <div *ngFor="let edu of education" class="mb-3">
-          <h6 class="text-secondary">{{ edu.year }}</h6>
-          <p class="fw-bold">{{ edu.degree }}</p>
-          <p>{{ edu.institution }}</p>
+          <!-- Experience -->
+          <div class="experience-content">
+            <span class="timeline-dot"></span>
+            <h3>
+              {{ exp.title }}
+            </h3>
+            <p class="company">
+              {{ exp.company }}
+            </p>
+            <ul>
+              <li
+                *ngFor="let point of exp.points"
+              >
+                {{ point }}
+              </li>
+            </ul>
+          </div>
         </div>
-      </div>
+      </section>
 
-      <div>
-        <h4 class="text-primary section-heading">Fun Fact</h4>
-        <p>{{ funFact }}</p>
-      </div>
+      <section class="cv-section">
+        <div class="section-heading">
+          <h2>
+            Education
+          </h2>
+        </div>
 
-    </div>
+        <div
+          *ngFor="let edu of education"
+          class="education-item"
+        >
+          <div class="education-year">
+            {{ edu.year }}
+          </div>
 
+          <div class="education-content">
+            <h3>
+              {{ edu.degree }}
+            </h3>
+            <p>
+              {{ edu.institution }}
+            </p>
+
+          </div>
+        </div>
+      </section>
+
+      <section class="cv-section fun-section">
+        <div class="section-heading">
+          <h2>
+            Fun Fact
+          </h2>
+        </div>
+
+        <p>
+          {{ funFact }}
+        </p>
+      </section>
+
+      <section class="reference-section">
+        <div class="reference-title">
+          REFERENCE
+        </div>
+        <h3>
+          Thomas Dam Andersen
+        </h3>
+        <p>
+          Education Developer, TEC
+        </p>
+        <p class="reference-description">
+          Strong recommendation available on LinkedIn
+          highlighting my organization, dedication,
+          and professionalism.
+        </p>
+        <a
+          href="https://www.linkedin.com/in/dikshya-singh-shah-72b46391/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          LinkedIn Profile →
+        </a>
+
+      </section>
+    </main>
   </div>
 </div>
