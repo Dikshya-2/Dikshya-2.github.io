@@ -4,11 +4,9 @@
 :host {
   display: block;
 }
-
 * {
   box-sizing: border-box;
 }
-
 .cv-page {
   min-height: 100vh;
   padding: 60px 20px;
@@ -16,7 +14,6 @@
   font-family: 'DM Sans', sans-serif;
   color: #2d3331;
 }
-
 .cv {
   width: 100%;
   max-width: 1050px;
