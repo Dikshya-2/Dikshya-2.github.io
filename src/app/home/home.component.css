@@ -1,103 +1,145 @@
+
+
+* {
+  box-sizing: border-box;
+}
+
 .home-container {
+  width: 100%;
   max-width: 100%;
   margin: 0 auto;
-  padding: 1rem;
-   padding-top: 100px;
+  padding: 100px 1rem 2rem;
   color: #eee;
   background-color: #121212;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  overflow-x: hidden;
 }
 
 .hero-section {
+  width: 100%;
+  min-height: calc(100vh - 100px);
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 2rem 1rem;
+  justify-content: center;
+  padding: 2rem 1rem 3rem;
   text-align: center;
   position: relative;
 }
 
 .hero-content {
+  width: 100%;
+  max-width: 1100px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  gap: 2rem;
-  max-width: 1000px;
-  width: 100%;
+  gap: 3rem;
 }
 
 .hero-text {
-  flex: 1 1 300px;
+  flex: 1 1 400px;
+  max-width: 650px;
 }
 
 .hero-title {
-  font-size: 2.5rem;
-  margin-bottom: 0.25rem;
+  margin: 0 0 0.25rem;
+  font-size: clamp(2rem, 5vw, 3rem);
+  line-height: 1.1;
   color: #ffa726;
 }
 
 .hero-name {
-  font-size: 2rem;
-  margin-bottom: 0.25rem;
+  margin: 0 0 0.5rem;
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+  line-height: 1.2;
   color: #fff;
 }
 
 .hero-role {
+  margin: 0 0 1.25rem;
+  font-size: clamp(1rem, 2vw, 1.2rem);
   font-style: italic;
-  margin-bottom: 1rem;
   color: #bbb;
 }
 
 .hero-description {
-  line-height: 1.6;
-  margin-bottom: 1.5rem;
+  max-width: 620px;
+  margin: 0 auto 1.75rem;
+  font-size: 1rem;
+  line-height: 1.7;
   color: #ccc;
-}
-.hero-buttons {
-  display: flex;
-  gap: 1rem;
-  justify-content: center;
-  flex-wrap: wrap;
+  white-space: pre-line;
 }
 
-.btn-primary, .btn-secondary {
+
+/* =========================================================
+   HERO BUTTONS
+   ========================================================= */
+
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.btn-primary,
+.btn-secondary {
+  min-width: 150px;
   padding: 0.75rem 1.5rem;
-  border: none;
   border-radius: 30px;
-  cursor: pointer;
+  font-size: 0.95rem;
   font-weight: 600;
-  transition: background-color 0.3s ease;
-  min-width: 140px;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease,
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 .btn-primary {
+  border: 2px solid #ffa726;
   background-color: #ffa726;
   color: #121212;
 }
 
 .btn-primary:hover {
   background-color: #fb8c00;
+  border-color: #fb8c00;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px #ffa72655;
 }
 
 .btn-secondary {
+  border: 2px solid #ffa726;
   background-color: transparent;
   color: #ffa726;
-  border: 2px solid #ffa726;
 }
 
 .btn-secondary:hover {
   background-color: #ffa726;
   color: #121212;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px #ffa72655;
 }
 
+
+/* =========================================================
+   HERO IMAGE
+   ========================================================= */
+
 .hero-image {
-  flex: 1 1 300px;
   position: relative;
-  max-width: 300px;
+  flex: 0 1 auto;
+  width: min(75vw, 300px);
   aspect-ratio: 1 / 1;
   border-radius: 50%;
-  overflow: hidden;
+  overflow: visible;
   box-shadow: 0 0 20px #ffa726;
 }
 
@@ -105,72 +147,98 @@
   position: relative;
   width: 100%;
   height: 100%;
+  border-radius: 50%;
+  overflow: hidden;
 }
 
 .profile-image {
+  display: block;
   width: 100%;
   height: 100%;
   object-fit: cover;
-   object-position: top;
-  display: block;
+  object-position: top center;
 }
 
 .image-glow {
   position: absolute;
-  top: -10px;
-  left: -10px;
-  right: -10px;
-  bottom: -10px;
+  inset: -10px;
   border-radius: 50%;
   box-shadow: 0 0 30px 8px #ffa726aa;
   pointer-events: none;
 }
 
+
+/* =========================================================
+   SCROLL INDICATOR
+   ========================================================= */
+
 .scroll-indicator {
-  margin-top: 2rem;
-  color: #ffa726;
-  font-weight: 600;
+  margin-top: 2.5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
+  color: #ffa726;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
   animation: bounce 2s infinite;
 }
 
 .scroll-arrow {
-  font-size: 2rem;
   margin-bottom: 0.3rem;
+  font-size: 2rem;
+  line-height: 1;
 }
 
 @keyframes bounce {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(10px); }
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(10px);
+  }
 }
 
+
+/* =========================================================
+   NAVIGATION SECTION
+   ========================================================= */
+
 .navigation-section {
-  margin: 3rem 0;
+  width: 100%;
+  max-width: 1100px;
+  margin: 3rem auto;
 }
 
 .nav-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 1.5rem;
 }
 
 .nav-card {
-  background: #1e1e1e;
-  border-radius: 12px;
+  min-height: 200px;
   padding: 1.5rem;
-  box-shadow: 0 0 10px #000;
-  cursor: pointer;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  color: #eee;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 100%;
   align-items: center;
+
+  background: #1e1e1e;
+  border-radius: 12px;
+  box-shadow: 0 0 10px #000;
+
+  color: #eee;
+  text-align: center;
   text-decoration: none;
-  color: inherit;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 .nav-card:hover {
@@ -178,90 +246,276 @@
   box-shadow: 0 8px 20px #ffa726aa;
 }
 
-.nav-icon {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-}
-
-.nav-arrow {
-  font-weight: 700;
-  font-size: 1.5rem;
-  align-self: flex-end;
-  color: #ffa726;
-}
-
 .nav-card h3 {
-  margin: 0.2rem 0 0.5rem;
+  margin: 0.2rem 0 0.75rem;
   color: #ffa726;
+  font-size: 1.15rem;
 }
 
 .nav-card p {
+  margin: 0;
   color: #ccc;
   font-size: 0.9rem;
+  line-height: 1.5;
 }
 
+.nav-arrow {
+  align-self: flex-end;
+  margin-top: auto;
+  color: #ffa726;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+
+/* =========================================================
+   HIGHLIGHTS SECTION
+   ========================================================= */
+
 .highlights-section {
-  margin-bottom: 3rem;
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto 3rem;
   text-align: center;
 }
 
 .section-title {
-  font-size: 2rem;
-  margin-bottom: 2rem;
+  margin: 0 0 2rem;
   color: #ffa726;
+  font-size: clamp(1.7rem, 4vw, 2.2rem);
 }
 
 .highlights-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 1.5rem;
 }
 
 .highlight-card {
+  min-height: 190px;
+  padding: 1.5rem;
+
   background: #1e1e1e;
   border-radius: 12px;
-  padding: 1.5rem;
-  color: #eee;
   box-shadow: 0 0 10px #000;
-  transition: box-shadow 0.3s ease;
+
+  color: #eee;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 .highlight-card:hover {
+  transform: translateY(-5px);
   box-shadow: 0 8px 20px #ffa726aa;
 }
 
 .highlight-card h3 {
-  margin-bottom: 0.75rem;
+  margin: 0 0 0.75rem;
   color: #ffa726;
+  font-size: 1.1rem;
 }
 
 .highlight-card p {
-  font-size: 1.1rem;
-  margin-bottom: 0.3rem;
+  margin: 0 0 0.5rem;
+  font-size: 1rem;
+  line-height: 1.5;
   font-weight: 600;
 }
 
 .highlight-card span {
   font-size: 0.85rem;
+  line-height: 1.4;
   color: #bbb;
 }
 
-@media (max-width: 768px) {
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1000px) {
   .hero-content {
-    flex-direction: column;
+    gap: 2rem;
   }
 
-  .hero-image {
-    max-width: 200px;
-    margin: 0 auto;
-  }
-
-  .nav-grid {
-    grid-template-columns: 1fr;
-  }
-
+  .nav-grid,
   .highlights-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 768px) {
+  .home-container {
+    padding: 90px 1rem 2rem;
+  }
+
+  .hero-section {
+    min-height: auto;
+    padding: 2rem 0 3rem;
+  }
+
+  .hero-content {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .hero-text {
+    width: 100%;
+    max-width: 650px;
+  }
+
+  .hero-description {
+    max-width: 100%;
+    font-size: 0.95rem;
+    line-height: 1.65;
+  }
+
+  .hero-image {
+    width: min(60vw, 220px);
+  }
+
+  .navigation-section {
+    margin: 2rem auto;
+  }
+
+  .nav-grid,
+  .highlights-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .nav-card,
+  .highlight-card {
+    min-height: auto;
+  }
+
+  .nav-card {
+    padding: 1.25rem;
+  }
+
+  .highlight-card {
+    padding: 1.25rem;
+  }
+
+  .section-title {
+    margin-bottom: 1.5rem;
+  }
+}
+
+
+/* =========================================================
+   SMALL PHONES
+   ========================================================= */
+
+@media (max-width: 480px) {
+  .home-container {
+    padding: 80px 0.75rem 1.5rem;
+  }
+
+  .hero-section {
+    padding: 1.5rem 0 2.5rem;
+  }
+
+  .hero-content {
+    gap: 1.5rem;
+  }
+
+  .hero-title {
+    font-size: 2rem;
+  }
+
+  .hero-name {
+    font-size: 1.7rem;
+  }
+
+  .hero-role {
+    font-size: 1rem;
+  }
+
+  .hero-description {
+    padding: 0 0.25rem;
+    font-size: 0.92rem;
+    line-height: 1.6;
+  }
+
+  .hero-buttons {
+    width: 100%;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    width: 100%;
+    max-width: 280px;
+  }
+
+  .hero-image {
+    width: min(58vw, 200px);
+  }
+
+  .scroll-indicator {
+    margin-top: 2rem;
+    font-size: 0.85rem;
+  }
+
+  .nav-card,
+  .highlight-card {
+    padding: 1.2rem;
+  }
+}
+
+
+/* =========================================================
+   VERY SMALL PHONES
+   ========================================================= */
+
+@media (max-width: 360px) {
+  .hero-title {
+    font-size: 1.8rem;
+  }
+
+  .hero-name {
+    font-size: 1.5rem;
+  }
+
+  .hero-description {
+    font-size: 0.88rem;
+  }
+
+  .hero-image {
+    width: 175px;
+  }
+
+  .nav-card h3,
+  .highlight-card h3 {
+    font-size: 1rem;
+  }
+
+  .nav-card p,
+  .highlight-card p {
+    font-size: 0.9rem;
+  }
+}
+
+
+/* =========================================================
+   TOUCH DEVICES
+   Prevent hover effects from feeling strange on phones
+   ========================================================= */
+
+@media (hover: none) {
+  .nav-card:hover,
+  .highlight-card:hover,
+  .btn-primary:hover,
+  .btn-secondary:hover {
+    transform: none;
+  }
+}

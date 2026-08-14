@@ -1,17 +1,10 @@
 import { CommonModule } from '@angular/common';
 import { Component, ElementRef, ViewChild } from '@angular/core';
-import { Router, RouterModule } from '@angular/router';
-import { SkillsComponent } from '../skills/skills.component';
-import { AboutComponent } from "../about/about.component";
-import { NavbarComponent } from '../navbar/navbar.component';
-import { ContactComponent } from "../contact/contact.component";
-import { ProjectComponent } from "../project/project.component";
-
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule, RouterModule],
+  imports: [CommonModule],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
@@ -21,7 +14,6 @@ export class HomeComponent {
   role = 'Junior Full-Stack Developer';
   description = `
 I build secure, user-friendly web and mobile applications using Angular, ASP.NET Core, SQL, and Java.
-
 With a background in Public Health and Biostatistics, I bring analytical thinking and problem-solving skills into software development. I enjoy creating practical solutions, learning new technologies, and growing as a developer.
 
   `;
