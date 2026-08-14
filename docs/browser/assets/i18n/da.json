@@ -1,0 +1,41 @@
+{
+  "ABOUT": {
+    "TITLE": "Om Mig",
+    "DESCRIPTION": "<p>Programmeringsuddannet fra TEC med stor interesse for full-stack udvikling og sikre applikationer.</p><p>Jeg nyder at bygge skalerbare løsninger og søger en <strong>Juniorudvikler</strong> rolle, hvor jeg kan gøre en forskel og udvikle mine kompetencer.</p>"
+  },
+  "CONTACT": {
+    "TITLE": "Kontakt",
+    "SUBTITLE": "Jeg er åben for praktik, samarbejde eller bare en venlig snak. Lad os connecte!",
+    "NAME": "Navn",
+    "EMAIL": "Email",
+    "PHONE": "Telefon",
+    "LOCATION": "Placering",
+    "SEND": "Send Besked",
+    "PLACEHOLDERS": {
+      "NAME": "Dit navn",
+      "EMAIL": "Din email",
+      "PHONE": "Dit telefonnummer",
+      "MESSAGE": "Din besked"
+    }
+  },
+  "CV": {
+    "PROFILE": "Profil",
+    "WORK_EXPERIENCE": "Erfaring",
+    "EDUCATION": "Uddannelse",
+    "FUN_FACT": "Sjov Fakt",
+    "SKILLS": "Færdigheder",
+    "LANGUAGES": "Sprog",
+    "CONTACT": "Kontakt"
+  },
+  "HOME": {
+    "WELCOME": "Velkommen til Mit Portfolio",
+    "ROLE": "Junior Full Stack Udvikler",
+    "DESCRIPTION": "Jeg er en passioneret Full-Stack Udvikler med erfaring i både frontend og backend."
+  },
+  "FOOTER": {
+    "CONTACT_ME": "Kontakt Mig",
+    "QUICK_LINKS": "Hurtige Links",
+    "FOLLOW_ME": "Følg Mig",
+    "COPYRIGHT": "Alle rettigheder forbeholdes."
+  }
+}

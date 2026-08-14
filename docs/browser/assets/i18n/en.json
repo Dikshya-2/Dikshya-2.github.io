@@ -1,0 +1,41 @@
+{
+  "ABOUT": {
+    "TITLE": "About Me",
+    "DESCRIPTION": "<p>Programming graduate from TEC with a strong interest in full-stack development and secure applications.</p><p>I enjoy building scalable solutions and am looking for a <strong>Junior Developer</strong> role where I can make an impact and grow my expertise.</p>"
+  },
+  "CONTACT": {
+    "TITLE": "Get in Touch",
+    "SUBTITLE": "I'm open to internship opportunities, collaborations, or just a friendly chat. Let’s connect!",
+    "NAME": "Name",
+    "EMAIL": "Email",
+    "PHONE": "Phone",
+    "LOCATION": "Location",
+    "SEND": "Send Message",
+    "PLACEHOLDERS": {
+      "NAME": "Your Name",
+      "EMAIL": "Your Email",
+      "PHONE": "Your Phone",
+      "MESSAGE": "Your Message"
+    }
+  },
+  "CV": {
+    "PROFILE": "Profile",
+    "WORK_EXPERIENCE": "Work Experience",
+    "EDUCATION": "Education",
+    "FUN_FACT": "Fun Fact",
+    "SKILLS": "Skills",
+    "LANGUAGES": "Languages",
+    "CONTACT": "Contact"
+  },
+  "HOME": {
+    "WELCOME": "Welcome to My Portfolio",
+    "ROLE": "Junior Full Stack Developer",
+    "DESCRIPTION": "I am a passionate Full-Stack Developer with experience in both frontend and backend technologies."
+  },
+  "FOOTER": {
+    "CONTACT_ME": "Contact Me",
+    "QUICK_LINKS": "Quick Links",
+    "FOLLOW_ME": "Follow Me",
+    "COPYRIGHT": "All Rights Reserved."
+  }
+}
