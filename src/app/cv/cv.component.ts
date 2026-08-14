@@ -166,7 +166,6 @@ export class CVComponent {
     }
 
   ];
-
   funFact = `
     Curious about AI and Machine Learning – eager to explore how technical development can meet biostatistics and epidemiology.
   `;
